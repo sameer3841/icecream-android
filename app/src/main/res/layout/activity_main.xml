@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--File : activity_main.xml-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="54dp"
+        android:text="Sameer Patel's Ice Cream"
+        android:textColor="#039BE5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="358dp"
+        android:layout_height="382dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="276dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="#C8E6C9">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="162dp"
+                android:layout_height="24dp"
+                android:text="  Flavor"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/flavors"
+                android:layout_width="187dp"
+                android:layout_height="38dp"
+                android:spinnerMode="dropdown" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#BBDEFB">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="160dp"
+                android:layout_height="32dp"
+                android:text="  Scoops"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/doubleScoop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Double Scoop" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C8E6C9">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="135dp"
+                android:layout_height="49dp"
+                android:lineSpacingExtra="14sp"
+                android:text="Cone"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/coneGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/paperCup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Paper Cup" />
+
+                <RadioButton
+                    android:id="@+id/plainCone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Plain Cone" />
+
+                <RadioButton
+                    android:id="@+id/chocolateWaffle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Waffle" />
+
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#B3E5FC">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="173dp"
+                android:layout_height="match_parent"
+                android:text="Quantity"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/quantitySlider"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:max="10"
+                    android:progress="3" />
+
+                <TextView
+                    android:id="@+id/quantityVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C8E6C9">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="171dp"
+                android:layout_height="match_parent"
+                android:text="Total"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 0.00"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

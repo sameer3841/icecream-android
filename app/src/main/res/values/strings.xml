@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IceCream</string>
+    <string-array name="spinner_items">
+        <item>Select flavor</item>
+        <item>Vanilla</item>
+        <item>Chocolate</item>
+        <item>Strawberry</item>
+        <item>Butterscotch</item>
+        <item>Coffee</item>
+        <item>Peach</item>
+    </string-array>
+</resources>
